@@ -53,10 +53,9 @@ fun ListPeserta(
             .padding(paddingValues = isiRuang),
             verticalArrangement = Arrangement.Top)
         {
-            daftar.forEach {
-                item->
+            daftar.forEach { item ->
                 Card(modifier = Modifier
-                    .padding(all = 12.dp)
+                    .padding(horizontal = 12.dp, vertical = 8.dp)
                     .fillMaxWidth(),
                     elevation = CardDefaults.cardElevation(defaultElevation = 10.dp),
                     colors = CardDefaults.cardColors(
@@ -67,34 +66,34 @@ fun ListPeserta(
                         .padding(all = 15.dp)
                     ) {
                         Text(text = item.first, fontSize = 16.sp)
+                        Spacer(modifier = Modifier.height(6.dp))
+                        Text(text = item.second,
+                            fontSize = 22.sp,
+                            fontFamily = FontFamily.Cursive)
                     }
-                    Spacer(modifier = Modifier.height(6.dp))
-                    Text(text = item.second,
-                        fontSize = 22.sp,
-                        fontFamily = FontFamily.Cursive)
                 }
-                Spacer(modifier = Modifier.height(height = 30.dp))
-                Button(modifier = Modifier
-                    .padding(10.dp)
-                    .fillMaxWidth(),
-                    colors = ButtonDefaults.buttonColors(
-                        containerColor = colorResource(R.color.purple_500)
-                    ),
-                    onClick = onBackToBerandaClick)
-                {
-                    Text(text = "Beranda")
-                }
-                Button(modifier = Modifier
-                    .padding(10.dp)
-                    .fillMaxWidth(),
-                    colors = ButtonDefaults.buttonColors(
-                        containerColor = colorResource(id=R.color.purple_500 )
-                    ),
-                    onClick = OnBtnToFormulirClick)
+            }
+            Spacer(modifier = Modifier.height(height = 30.dp)) // Jarak dari card terakhir
 
-                {
-                    Text(text = stringResource(R.string.formulir))
-                }
+            Button(modifier = Modifier
+                .padding(horizontal = 10.dp, vertical = 5.dp) // Sedikit penyesuaian padding
+                .fillMaxWidth(),
+                colors = ButtonDefaults.buttonColors(
+                    containerColor = colorResource(R.color.purple_500)
+                ),
+                onClick = onBackToBerandaClick)
+            {
+                Text(text = "Beranda")
+            }
+            Button(modifier = Modifier
+                .padding(horizontal = 10.dp, vertical = 5.dp) // Sedikit penyesuaian padding
+                .fillMaxWidth(),
+                colors = ButtonDefaults.buttonColors(
+                    containerColor = colorResource(id=R.color.purple_500 )
+                ),
+                onClick = OnBtnToFormulirClick)
+            {
+                Text(text = stringResource(R.string.formulir))
             }
         }
     }
