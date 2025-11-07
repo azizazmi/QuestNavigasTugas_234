@@ -13,6 +13,9 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.font.FontFamily
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.unit.sp
 import com.example.navigasi_234.R
 
 @Composable
@@ -26,7 +29,12 @@ fun Beranda(OnSubmitBtnClick:()-> Unit) {
             verticalArrangement = Arrangement.Center,
             horizontalAlignment = Alignment.CenterHorizontally)
         {
-            Text(text = stringResource(R.string.welcome))
+            Text(text = stringResource(R.string.welcome),
+                modifier = Modifier,
+                fontWeight = FontWeight.Bold,
+                fontFamily = FontFamily.Serif,
+                fontSize = 40.sp,
+                color = Color(0xFF58b4f5))
         }
 
     }
