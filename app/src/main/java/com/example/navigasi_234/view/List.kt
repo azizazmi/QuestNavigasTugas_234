@@ -3,8 +3,13 @@ package com.example.navigasi_234.view
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.material3.Card
+import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
@@ -15,6 +20,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.font.FontFamily
+import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import com.example.navigasi_234.R
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -43,7 +51,29 @@ fun ListPeserta(
             .padding(paddingValues = isiRuang),
             verticalArrangement = Arrangement.Top)
         {
+            daftar.forEach {
+                item->
+                Card(modifier = Modifier
+                    .padding(all = 12.dp)
+                    .fillMaxWidth(),
+                    elevation = CardDefaults.cardElevation(defaultElevation = 10.dp),
+                    colors = CardDefaults.cardColors(
+                        containerColor = Color.White)
+                )
+                {
+                    Column(modifier = Modifier
+                        .padding(all = 15.dp)
+                    ) {
+                        Text(text = item.first, fontSize = 16.sp)
+                    }
+                    Spacer(modifier = Modifier.height(6.dp))
+                    Text(text = item.second,
+                        fontSize = 22.sp,
+                        fontFamily = FontFamily.Cursive)
+                }
+                Spacer(modifier = Modifier.height(height = 30.dp))
 
+            }
         }
     }
 }
