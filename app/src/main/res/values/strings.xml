@@ -7,4 +7,5 @@
     <string name="namalengkap">NAMA LENGKAP</string>
     <string name="jk">JENIS KELAMIN</string>
     <string name="status">STATUS PERKAWINAN</string>
+    <string name="alamat">ALAMAT</string>
 </resources>
