@@ -46,6 +46,11 @@ fun Beranda(OnSubmitBtnClick:()-> Unit) {
                 contentScale = ContentScale.Fit
             )
             Spacer(modifier = Modifier.height(height = 30.dp))
+            Text(text = stringResource(R.string.Nama),
+                modifier = Modifier,
+                fontSize = 22.sp,
+                fontFamily = FontFamily.Monospace,
+                color = Color(0xFF58b4f5))
         }
 
     }
