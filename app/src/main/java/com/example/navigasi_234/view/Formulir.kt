@@ -43,14 +43,14 @@ fun FormDataDiri(onBackToBtnClick:()-> Unit) {
     ) {
         Box(modifier = Modifier
             .fillMaxWidth()
-            .height(120.dp)
+            .height(100.dp)
             .background(color = colorResource(R.color.purple_200)),
             Alignment.BottomStart
         ){
             Text(
                 text = stringResource(R.string.formulir),
                 color = Color.White,
-                fontSize = 35.sp
+                fontSize = 20.sp
             )
         }
         Box(modifier = Modifier
@@ -58,33 +58,33 @@ fun FormDataDiri(onBackToBtnClick:()-> Unit) {
             .background(color = Color.White)) {
             ElevatedCard(modifier = Modifier
                 .fillMaxWidth()
-                .padding(all = 20.dp)
+                .padding(all = 5.dp)
                 .background(color = Color.White))
             {
                 Column(modifier = Modifier) {
                     Text( modifier = Modifier.padding(
-                        top = 10.dp,
+                        top = 5.dp,
                         start = 5.dp),
                         text = stringResource(R.string.namalengkap),
                         color = Color.Black,
-                        fontSize = 20.sp
+                        fontSize = 15.sp
                     )
                     OutlinedTextField(
                         value = "",
                         singleLine = true,
-                        shape = MaterialTheme.shapes.large,
+                        shape = MaterialTheme.shapes.medium,
                         modifier = Modifier
-                            .padding(all = 10.dp)
+                            .padding(all = 2.dp)
                             .fillMaxWidth(),
                         label = { Text(text = "Isian nama lengkap") },
                         onValueChange = { }
                     )
                     Text( modifier = Modifier.padding(
-                        top = 10.dp,
+                        top = 5.dp,
                         start = 5.dp),
                         text = stringResource(R.string.jk),
                         color = Color.Black,
-                        fontSize = 20.sp
+                        fontSize = 15.sp
                     )
                     Column(modifier = Modifier) {
                         gender.forEach { item ->
@@ -102,11 +102,11 @@ fun FormDataDiri(onBackToBtnClick:()-> Unit) {
                         }
                     }
                     Text( modifier = Modifier.padding(
-                        top = 10.dp,
+                        top = 5.dp,
                         start = 5.dp),
                         text = stringResource(R.string.status),
                         color = Color.Black,
-                        fontSize = 20.sp
+                        fontSize = 15.sp
                     )
                     Column(modifier = Modifier) {
                         status.forEach { item ->
@@ -127,23 +127,23 @@ fun FormDataDiri(onBackToBtnClick:()-> Unit) {
                         start = 5.dp),
                         text = stringResource(R.string.alamat),
                         color = Color.Black,
-                        fontSize = 20.sp
+                        fontSize = 15.sp
                     )
                     OutlinedTextField(
                         value = "",
                         singleLine = true,
                         shape = MaterialTheme.shapes.large,
                         modifier = Modifier
-                            .padding(all = 10.dp)
+                            .padding(all = 2.dp)
                             .fillMaxWidth(),
                         label = { Text(text = "Alamat") },
                         onValueChange = {}
                     )
                     Button(
                         modifier = Modifier
-                            .padding(top = 30.dp)
+                            .padding(top = 10.dp)
                             .fillMaxWidth(1f)
-                            .background(color = colorResource(R.color.purple_500)),
+                            .background(color = Color.White),
                         onClick = onBackToBtnClick
                     ) {
                         Text(stringResource((R.string.submit)), color = Color.White)
