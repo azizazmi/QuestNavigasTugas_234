@@ -56,7 +56,7 @@ fun FormDataDiri(modifier: Modifier) {
             Alignment.BottomStart
         ){
             Text(
-                text = "Formulir Pendaftaran",
+                text = stringResource(R.string.formulir),
                 color = Color.White,
                 fontSize = 35.sp
             )
@@ -73,7 +73,7 @@ fun FormDataDiri(modifier: Modifier) {
                     Text( modifier = Modifier.padding(
                         top = 10.dp,
                         start = 5.dp),
-                        text = "NAMA LENGKAP",
+                        text = stringResource(R.string.namalengkap),
                         color = Color.Black,
                         fontSize = 20.sp
                     )
@@ -92,7 +92,7 @@ fun FormDataDiri(modifier: Modifier) {
                     Text( modifier = Modifier.padding(
                         top = 10.dp,
                         start = 5.dp),
-                        text = "JENIS KELAMIN",
+                        text = stringResource(R.string.jk),
                         color = Color.Black,
                         fontSize = 20.sp
                     )
@@ -116,7 +116,7 @@ fun FormDataDiri(modifier: Modifier) {
                     Text( modifier = Modifier.padding(
                         top = 10.dp,
                         start = 5.dp),
-                        text = "STATUS PERKAWINAN",
+                        text = stringResource(R.string.status),
                         color = Color.Black,
                         fontSize = 20.sp
                     )
@@ -139,7 +139,7 @@ fun FormDataDiri(modifier: Modifier) {
                     }
                     Text( modifier = Modifier.padding(top = 10.dp,
                         start = 5.dp),
-                        text = "ALAMAT",
+                        text = stringResource(R.string.alamat),
                         color = Color.Black,
                         fontSize = 20.sp
                     )
